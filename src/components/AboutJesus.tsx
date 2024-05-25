@@ -31,9 +31,9 @@ function AboutJesus({}: Props) {
           <Tooltip
             color="primary"
             content="No princípio era o Verbo, e o Verbo estava com Deus, e o Verbo era Deus."
-            className="capitalize"
+            className=""
           >
-            <Button variant="light" color="default" className="capitalize">
+            <Button variant="light" color="default" className="">
               João 1:1  
             </Button>
           </Tooltip>
@@ -43,9 +43,9 @@ function AboutJesus({}: Props) {
           <Tooltip
             color="primary"
             content="No dia seguinte João viu a Jesus, que vinha para ele, e disse: Eis o Cordeiro de Deus, que tira o pecado do mundo."
-            className="capitalize"
+            className=""
           >
-            <Button variant="light" color="default" className="capitalize">
+            <Button variant="light" color="default" className="">
               João 1:29
             </Button>
           </Tooltip>
@@ -55,9 +55,9 @@ function AboutJesus({}: Props) {
           <Tooltip
             color="primary"
             content="Disse-lhes ele: E vós, quem dizeis que eu sou? Simão Pedro, respondendo, disse: Tu és o Cristo, o Filho do Deus vivo."
-            className="capitalize"
+            className=""
           >
-            <Button variant="light" color="default" className="capitalize">
+            <Button variant="light" color="default" className="">
               Mateus 16:15-16
             </Button>
           </Tooltip>
@@ -67,9 +67,9 @@ function AboutJesus({}: Props) {
           <Tooltip
             color="primary"
             content="Disse-lhe Jesus: Eu sou o caminho, e a verdade e a vida; ninguém vem ao Pai, senão por mim."
-            className="capitalize"
+            className=""
           >
-            <Button variant="light" className="capitalize">
+            <Button variant="light" className="">
               João 14:6
             </Button>
           </Tooltip>
@@ -79,9 +79,9 @@ function AboutJesus({}: Props) {
           <Tooltip
             color="primary"
             content="Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna."
-            className="capitalize"
+            className=""
           >
-            <Button variant="light" color="default" className="capitalize">
+            <Button variant="light" color="default" className="">
               João 3:16
             </Button>
           </Tooltip>
@@ -95,9 +95,9 @@ function AboutJesus({}: Props) {
             <Tooltip
               color="primary"
               content="Não cuideis que vim trazer a paz à terra; não vim trazer paz, mas espada. Porque eu vim pôr em dissensão o homem contra seu pai, e a filha contra sua mãe, e a nora contra sua sogra; E assim os inimigos do homem serão os seus familiares. Quem ama o pai ou a mãe mais do que a mim não é digno de mim; e quem ama o filho ou a filha mais do que a mim não é digno de mim. E quem não toma a sua cruz, e não segue após mim, não é digno de mim. Quem achar a sua vida, perdê-la-á, e quem perder a sua vida por amor de mim, achá-la-á."
-              className="capitalize"
+              className=""
             >
-              <Button variant="light" color="default" className="capitalize">
+              <Button variant="light" color="default" className="">
                 Mateus 10:34-39
               </Button>
             </Tooltip>
@@ -109,9 +109,9 @@ function AboutJesus({}: Props) {
             <Tooltip
               color="primary"
               content="Disse-lhe Jesus: Eu sou o caminho, e a verdade e a vida; ninguém vem ao Pai, senão por mim."
-              className="capitalize"
+              className=""
             >
-              <Button variant="light" color="default" className="capitalize">
+              <Button variant="light" color="default" className="">
                 João 14:6
               </Button>
             </Tooltip>
@@ -119,9 +119,9 @@ function AboutJesus({}: Props) {
             <Tooltip
               color="primary"
               content="E ele morreu por todos, para que os que vivem não vivam mais para si, mas para aquele que por eles morreu e ressuscitou."
-              className="capitalize"
+              className=""
             >
-              <Button variant="light" color="default" className="capitalize">
+              <Button variant="light" color="default" className="">
                 2 Coríntios 5:15
               </Button>
             </Tooltip>
@@ -130,9 +130,9 @@ function AboutJesus({}: Props) {
             <Tooltip
               color="primary"
               content="Jesus respondeu, e disse-lhes: Ainda que eu testifico de mim mesmo, o meu testemunho é verdadeiro, porque sei de onde vim e para onde vou; mas vós não sabeis de onde venho, nem para onde vou."
-              className="capitalize"
+              className=""
             >
-              <Button variant="light" color="default" className="capitalize">
+              <Button variant="light" color="default" className="">
                 João 8:14
               </Button>
             </Tooltip>
@@ -140,9 +140,9 @@ function AboutJesus({}: Props) {
             <Tooltip
               color="primary"
               content="Eu e o Pai somos um."
-              className="capitalize"
+              className=""
             >
-              <Button variant="light" color="default" className="capitalize">
+              <Button variant="light" color="default" className="">
                 João 10:30
               </Button>
             </Tooltip>
@@ -150,9 +150,9 @@ function AboutJesus({}: Props) {
             <Tooltip
               color="primary"
               content="Quem é de Deus escuta as palavras de Deus; por isso vós não as escutais, porque não sois de Deus."
-              className="capitalize"
+              className=""
             >
-              <Button variant="light" color="default" className="capitalize">
+              <Button variant="light" color="default" className="">
                 João 8:47
               </Button>
             </Tooltip>
