@@ -7,11 +7,11 @@ import ModalText from "@/components/ModalText";
 export default function Main() {
   return (
     <div>
-  <GlobeDemo />
-    <Home />
-    <ModalText />
-    <CardWordJesus />
-    <AboutJesus />
-   </div>
-  )
+        <GlobeDemo />
+        <Home />
+        <ModalText />
+        <CardWordJesus />
+        <AboutJesus />
+    </div>
+  );
 }

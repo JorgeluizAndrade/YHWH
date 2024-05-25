@@ -28,9 +28,10 @@ export default function Home() {
       </div>
       <h1 className="pt-3 text-center text-3xl">Olá amigos(as)!</h1>
       <p className="text-center pt-3 text-2xl">
-        Palavra de Deus para você, o qual Ele ama tanto que deu o seu Filho
-        Unigênito, <br /> para que todo o que nele crer não pereça, mas tenha a
-        vida eterna.
+        Em Mateus 24:35 o Senhor Jesus diz "-os céus e a terra passarão, mas as minhas palavras jamais passarão." <br />
+        Logo, consegue vê a importância da Palavra? <br />
+        Eu proponho um desafio simples e nada difícil, que é o seguinte: No capítulo que cair em um livro, você lê o capítulo todo. Bem fácil, né? 
+        <br /> 
       </p>
     </motion.div>
   );
