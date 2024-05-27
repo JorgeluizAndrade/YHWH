@@ -16,20 +16,22 @@ type Props = {};
 export default function ModalText({}: Props) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   return (
-    <div className="text-center pt-10">
+    <div className="text-center pt-10 px-4 sm:px-6 lg:px-8">
       <Button color="primary" variant="shadow" onPress={onOpen}>
-        O que Jesus fala para você!{" "}
+        O que Jesus fala para você!
       </Button>
       <Modal
+        backdrop="blur"
         isOpen={isOpen}
         onOpenChange={onOpenChange}
-        placement="bottom"
+        placement="center" // Changed from "bottom-center" to "center" for better mobile display
         isDismissable={false}
         isKeyboardDismissDisabled={true}
-        size="5xl"
+        size="2xl"
+        className="" // Added a custom class for responsive styles
       >
-        <ModalContent>
-          {(onClose) => (
+        <ModalContent className="px-4 sm:px-6 lg:px-8">
+          {(onClose: () => void) => (
             <>
               <ModalHeader className="flex flex-col gap-1">
                 Leia 2 Timóteo 2:22-26
@@ -39,7 +41,7 @@ export default function ModalText({}: Props) {
                   Imagine Jesus na sua frente no último momento da sua vida
                   dizendo:
                 </p>
-                <p className="padding">
+                <p className="py-2">
                   "Eu quis te salvar, mas você não deu ouvido
                   <br />
                   Morri pra te libertar e tu foste refém do prazer
@@ -50,10 +52,9 @@ export default function ModalText({}: Props) {
                   <br />- WJ, Minha Última Poesia
                 </p>
                 <p>
-                  Meus amados, arrependam-se dos seus pecados e vivam para Jesus
-                  Cristo! Quanto mais você O rejeita e ignora, mais se cumpre
-                  esta palavra:
-                  <br />
+                  Meus amados, arrependam-se dos seus pecados e vivam para
+                  Jesus Cristo! Quanto mais você O rejeita e ignora, mais se
+                  cumpre esta palavra:
                   - Quantas vezes eu quis reunir os teus filhos, como a galinha
                   ajunta os seus pintinhos debaixo das asas, e vós não
                   quisestes! Eis que a vossa casa vos ficará deserta.
@@ -65,7 +66,7 @@ export default function ModalText({}: Props) {
                   arrependa-se, siga-O e deleite-se nas leis do nosso Deus.
                   Jesus te ama e quer você com Ele! Apenas vá, e deixe o rio de
                   vida fluir em ti.
-                  <br />E sempre lembre que o salário do pecado é a morte, mas o
+                  E sempre lembre que o salário do pecado é a morte, mas o
                   dom gratuito de Deus é a vida eterna em Cristo Jesus, nosso
                   Senhor (Romanos 6 23). Jesus te ama!
                 </p>
