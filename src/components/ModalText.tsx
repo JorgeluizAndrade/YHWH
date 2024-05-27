@@ -37,11 +37,7 @@ export default function ModalText({}: Props) {
                 Leia 2 Timóteo 2:22-26
               </ModalHeader>
               <ModalBody>
-                <p>
-                  Imagine Jesus na sua frente no último momento da sua vida
-                  dizendo:
-                </p>
-                <p className="py-2">
+                <p className="pt-5">
                   "Eu quis te salvar, mas você não deu ouvido
                   <br />
                   Morri pra te libertar e tu foste refém do prazer
