@@ -12,6 +12,7 @@ export default function Main() {
         <ModalText />
         <CardWordJesus />
         <AboutJesus />
+        <Footer />
     </div>
   );
 }
