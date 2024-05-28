@@ -55,7 +55,7 @@ export default function CardWordJesus({}) {
 
   const router = useRouter();
   const handleRefresh = () => {
-    router.refresh();
+    window.location.reload();
   };
 
   return (
