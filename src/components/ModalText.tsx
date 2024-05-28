@@ -56,15 +56,11 @@ export default function ModalText({}: Props) {
                   quisestes! Eis que a vossa casa vos ficará deserta.
                   Declaro-vos, pois, que, desde agora, já não me vereis, até que
                   venhais a dizer: "Bendito o que vem em nome do Senhor!"
-                  (Mateus 23:37-38). <br /> No final de tudo, não adiantará
-                  dizer: "Mas Senhor meu Deus, eu NÃO tive chances." Recomendo
-                  que leia novamente a poesia acima. Faça a vontade do Senhor,
-                  arrependa-se, siga-O e deleite-se nas leis do nosso Deus.
-                  Jesus te ama e quer você com Ele! Apenas vá, e deixe o rio de
+                  (Mateus 23:37-38). Apenas vá para Ele, e deixe o rio de
                   vida fluir em ti.
                   E sempre lembre que o salário do pecado é a morte, mas o
                   dom gratuito de Deus é a vida eterna em Cristo Jesus, nosso
-                  Senhor (Romanos 6 23). Jesus te ama!
+                  Senhor(Romanos 6 23). Jesus te ama!
                 </p>
               </ModalBody>
               <ModalFooter>
