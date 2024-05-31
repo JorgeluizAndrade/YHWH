@@ -14,10 +14,9 @@ export function LetterToJesus({}: Props) {
   const copyToClipboard = useClipboard();
   const textAreaRef = React.useRef<HTMLTextAreaElement>(null);
 
-
    const handleCopyClick = () => {
     if (textAreaRef.current) {
-      copyToClipboard(textAreaRef.current);
+      copyToClipboard(textAreaRef.current.value);
       }
       toast.info('✨Carta copiada!', {
         position: "top-center",
@@ -40,10 +39,10 @@ export function LetterToJesus({}: Props) {
   };
 
   return (
-    <div className="flex flex-col items-center mt-9 justify-center h-screen text-center">
+    <div className="flex flex-col items-center mb-5 justify-center h-screen text-center">
       <TypewriterEffectSmoothDemo />
       <div className="flex justify-center items-center mt-6 w-full">
-        <Card className="max-w-[600px] w-full">
+        <Card className=" max-w-[450px] md:max-w-[600px]   w-full">
           <CardBody>
             <div className="w-full">
               <Textarea
