@@ -3,6 +3,7 @@ import CardWordJesus from "@/components/CardWordJesus";
 import Footer from "@/components/Footer";
 import { GlobeDemo } from "@/components/Goble";
 import Home from "@/components/Home";
+import { LetterToJesus } from "@/components/LetterToJesus";
 import ModalText from "@/components/ModalText";
 
 export default function Main() {
@@ -12,6 +13,7 @@ export default function Main() {
         <Home />
         <ModalText />
         <CardWordJesus />
+        <LetterToJesus />
         <AboutJesus />
         <Footer />
     </div>

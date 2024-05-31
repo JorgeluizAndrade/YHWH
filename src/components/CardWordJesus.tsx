@@ -4,7 +4,7 @@
 import React from "react";
 import useSWR from "swr";
 import { motion } from "framer-motion";
-
+import { Tabs, Tab } from "@nextui-org/react";
 
 import {
   Card,
@@ -15,7 +15,6 @@ import {
   Image,
   Button,
 } from "@nextui-org/react";
-import { useRouter } from "next/navigation";
 
 type Props = {};
 
@@ -30,13 +29,19 @@ type BibleApi = {
 };
 
 export default function CardWordJesus({}) {
+  const [version, setVersion] = React.useState("nvi");
   const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
   const { data, isLoading, error } = useSWR<BibleApi>(
-    () => "https://www.abibliadigital.com.br/api/verses/nvi/random",
+    () => `https://www.abibliadigital.com.br/api/verses/${version}/random`,
     fetcher
   );
 
+  const handleChangeVersion = (key: string | number) => {
+    if (typeof key === "string") {
+      setVersion(key);
+    }
+  };
 
   if (isLoading)
     return (
@@ -49,21 +54,21 @@ export default function CardWordJesus({}) {
       </div>
     );
 
-    if(error){
-      <h1>eita</h1>
-    }
+  if (error) {
+    <h1>eita</h1>;
+  }
 
-  const router = useRouter();
   const handleRefresh = () => {
     window.location.reload();
   };
 
   return (
     <motion.div
-    initial={{ opacity: 0 }}
-    whileInView={{ opacity: 1 }}
-    viewport={{ once: true }}
-    className="flex justify-center pt-20 items-center">
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      className="flex justify-center pt-20 items-center"
+    >
       <Card className="max-w-[450px]">
         <CardHeader className="flex gap-3">
           <Image
@@ -88,6 +93,16 @@ export default function CardWordJesus({}) {
         <CardBody>{data?.text}</CardBody>
         <Divider />
         <CardFooter>
+          <Tabs
+            color="primary"
+            aria-label="Bible Versions Tabs"
+            radius="full"
+            selectedKey={version}
+            onSelectionChange={handleChangeVersion}
+          >
+            <Tab key="acf" title="ACF" />
+            <Tab key="nvi" title="NVI" />
+          </Tabs>
           <Button color="primary" variant="light" onClick={handleRefresh}>
             Outro versiculo
           </Button>
