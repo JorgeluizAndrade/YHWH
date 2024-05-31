@@ -12,7 +12,7 @@ type Props = {};
 
 export function LetterToJesus({}: Props) {
   const copyToClipboard = useClipboard();
-  const textAreaRef = React.useRef(null);
+  const textAreaRef = React.useRef<HTMLTextAreaElement>(null);
 
 
    const handleCopyClick = () => {
