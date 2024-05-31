@@ -14,8 +14,8 @@ function AboutJesus({}: Props) {
     initial={{ opacity: 0, y: 100 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ delay: 0.175 }}
-    className="flex justify-center items-center min-h-screen mt-5 px-4">
-    <div className="max-w-md w-full text-center">
+    className="flex justify-center items-center min-h-screen mt-10 pt-10 px-4">
+    <div className="max-w-md w-full mt-10 text-center">
       <h2 className="text-3xl mt-4 italic text-center font-medium capitalize mb-8">
         YHWH(יהוה)
       </h2>
