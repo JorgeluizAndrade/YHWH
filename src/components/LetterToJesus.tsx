@@ -17,7 +17,7 @@ export function LetterToJesus({}: Props) {
 
    const handleCopyClick = () => {
     if (textAreaRef.current) {
-      copyToClipboard(textAreaRef.current.value);
+      copyToClipboard(textAreaRef.current);
       }
       toast.info('✨Carta copiada!', {
         position: "top-center",
