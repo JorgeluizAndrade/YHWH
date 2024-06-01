@@ -10,10 +10,10 @@ export function TypewriterEffectSmoothDemo() {
       text: "uma",
     },
     {
-      text: "carta",
+      text: "linda",
     },
     {
-      text: "linda",
+      text: "carta",
     },
     {
         text: "para",

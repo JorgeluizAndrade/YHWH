@@ -42,7 +42,7 @@ export function LetterToJesus({}: Props) {
     <div className="flex flex-col items-center mb-5 justify-center h-screen text-center">
       <TypewriterEffectSmoothDemo />
       <div className="flex justify-center items-center mt-6 w-full">
-        <Card className=" max-w-[450px] md:max-w-[600px]   w-full">
+        <Card className=" max-w-[450px] md:max-w-[600px] w-full">
           <CardBody>
             <div className="w-full">
               <Textarea
