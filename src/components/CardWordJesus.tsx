@@ -30,8 +30,19 @@ type BibleApi = {
 
 export default function CardWordJesus({}) {
   const [version, setVersion] = React.useState("nvi");
-  const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
+  const fetcher = async (url: string) => {
+    const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdHIiOiJNb24gSnVuIDEwIDIwMjQgMjM6MDE6MTIgR01UKzAwMDAuamRzaGpzamRqc3NAZXhhbXBsZS5jb20iLCJpYXQiOjE3MTgwNjA0NzJ9.eHEyCfGAtaVdBDteq6S6pPeXK_pv8btXUy6HtnfkIJ4';
+    const headers = new Headers();
+
+    
+    headers.append('Authorization', `Bearer ${token}`);
+    headers.append('Accept', 'application/json');
+  
+    const res = await fetch(url, { headers });
+    return await res.json();
+  };
+  
   const { data, isLoading, error } = useSWR<BibleApi>(
     () => `https://www.abibliadigital.com.br/api/verses/${version}/random`,
     fetcher
