@@ -26,7 +26,7 @@ export default function Home() {
           src="https://i.pinimg.com/564x/79/e4/bd/79e4bde615db617869d800c53cf616f1.jpg"
         /> */}
       </div>
-      <h1 className="pt-3 text-center text-3xl">Marcus 1:15</h1>
+      <h1 className="pt-3 text-center text-3xl">Marcos 1:15</h1>
       <p className="text-center pt-3 text-lg">
         O tempo está cumprido, e o Reino de Deus está próximo. Arrependei-vos e crede no evangelho.
       </p>
