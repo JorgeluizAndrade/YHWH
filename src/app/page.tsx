@@ -5,6 +5,8 @@ import { GlobeDemo } from "@/components/Goble";
 import Home from "@/components/Home";
 import { LetterToJesus } from "@/components/LetterToJesus";
 import ModalText from "@/components/ModalText";
+import { TypewriterEffectSmoothDemo } from "../components/TypewriterEffectSmooth";
+import { FlipWordsDemo } from "@/components/FlipWords";
 
 export default function Main() {
   return (
@@ -13,6 +15,7 @@ export default function Main() {
         <Home />
         <ModalText />
         <CardWordJesus />
+        <FlipWordsDemo />
         <LetterToJesus />
         <AboutJesus />
         <Footer />
