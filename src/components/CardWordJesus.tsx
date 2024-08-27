@@ -30,6 +30,8 @@ type BibleApi = {
 
 export default function CardWordJesus({}) {
   const [version, setVersion] = React.useState("nvi");
+  const abbrev = ["mt", "mc", "lc", "jo", "at", "rm", "1co", "2co", "gl", "ef", "fp", "cl", "1ts", "2ts", "1tm", "2tm", "tt", "fm", "hb", "tg", "1pe", "2pe", "1jo", "2jo", "3jo", "jd", "ap"];
+  const abbrevLen = abbrev.length;
 
   const fetcher = async (url: string) => {
     const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdHIiOiJNb24gSnVuIDEwIDIwMjQgMjM6MDE6MTIgR01UKzAwMDAuamRzaGpzamRqc3NAZXhhbXBsZS5jb20iLCJpYXQiOjE3MTgwNjA0NzJ9.eHEyCfGAtaVdBDteq6S6pPeXK_pv8btXUy6HtnfkIJ4';
@@ -43,8 +45,11 @@ export default function CardWordJesus({}) {
     return await res.json();
   };
   
+
+  const randomAbbrev = abbrev[Math.floor(Math.random() * abbrevLen)]
+  
   const { data, isLoading, error } = useSWR<BibleApi>(
-    () => `https://www.abibliadigital.com.br/api/verses/${version}/random`,
+    () => `https://www.abibliadigital.com.br/api/verses/nvi/${randomAbbrev}/random`,
     fetcher
   );
 
