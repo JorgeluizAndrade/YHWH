@@ -28,10 +28,10 @@ type BibleApi = {
   text: string;
 };
 
+
 export default function CardWordJesus({}) {
   const [version, setVersion] = React.useState("nvi");
-  const abbrev = ["mt", "mc", "lc", "jo", "at", "rm", "1co", "2co", "gl", "ef", "fp", "cl", "1ts", "2ts", "1tm", "2tm", "tt", "fm", "hb", "tg", "1pe", "2pe", "1jo", "2jo", "3jo", "jd", "ap"];
-  const abbrevLen = abbrev.length;
+
 
   const fetcher = async (url: string) => {
     const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdHIiOiJNb24gSnVuIDEwIDIwMjQgMjM6MDE6MTIgR01UKzAwMDAuamRzaGpzamRqc3NAZXhhbXBsZS5jb20iLCJpYXQiOjE3MTgwNjA0NzJ9.eHEyCfGAtaVdBDteq6S6pPeXK_pv8btXUy6HtnfkIJ4';
@@ -46,16 +46,21 @@ export default function CardWordJesus({}) {
   };
   
 
-  const randomAbbrev = abbrev[Math.floor(Math.random() * abbrevLen)]
   
-  const { data, isLoading, error } = useSWR<BibleApi>(
-    () => `https://www.abibliadigital.com.br/api/verses/nvi/${randomAbbrev}/random`,
+  const { data, isLoading, error, mutate } = useSWR<BibleApi>(
+    () => {
+      return `https://www.abibliadigital.com.br/api/verses/${version}/random`;
+    },
+    
     fetcher
   );
+
+
 
   const handleChangeVersion = (key: string | number) => {
     if (typeof key === "string") {
       setVersion(key);
+      mutate();
     }
   };
 
@@ -70,8 +75,9 @@ export default function CardWordJesus({}) {
       </div>
     );
 
+
   if (error) {
-    <h1>eita</h1>;
+    <h1>Erro ao carregar o versiculo</h1>;
   }
 
   const handleRefresh = () => {
@@ -119,7 +125,7 @@ export default function CardWordJesus({}) {
             <Tab key="acf" title="ACF" />
             <Tab key="nvi" title="NVI" />
           </Tabs>
-          <Button color="primary" variant="light" onClick={handleRefresh}>
+          <Button color="primary" variant="light" onClick={() => mutate()}>
             Outro versiculo
           </Button>
         </CardFooter>
